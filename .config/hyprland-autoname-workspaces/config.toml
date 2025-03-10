@@ -1,0 +1,142 @@
+version = "1.1.15"
+
+[class]
+krita = ""
+libreoffice-impress = ""
+figma-linux = ""
+Mailspring = "<b></b>"
+jetbrains-studio = "󰀴"
+MuseScore = ""
+Nautilus = "󰉋"
+nm-connection-editor = ""
+"ONLYOFFICE Desktop Editors" = ""
+"Gimp-2.10" = ""
+Bitwarden = "󰞀"
+bruno = "󰩃"
+libreoffice-writer = ""
+hyprland-share-picker = "󱒃"
+pavucontrol = ""
+Spotify = ""
+"jellyfinmediaplayerCode|jellyfin-media-player|jellyfinmediaplayer|Jellyfin Media Player" = ""
+"code-oss|Code" = "󰘐"
+jetbrains-idea-ce = ""
+"org.kde.gwenview|eog" = ""
+nwg-look = ""
+steam = ""
+"org.gnome.TextEditor" = "<b></b>"
+"[Nn]extcloud" = ""
+virt-manager = ""
+libreoffice-calc = ""
+thunderbird = "<b></b>"
+"wireshark-gtk|Wireshark" = "󱢺"
+soffice = "󰈙"
+kwalletmanager5 = ""
+net-sourceforge-jnlp-runtime-Boot = ""
+chromium = ""
+"qt6ct|qt5ct" = "󰃣"
+kitty = ""
+cs2 = ""
+"discord|vesktop" = ""
+"org.gnome.Calculator" = ""
+polkit-kde-authentication-agent-1 = ""
+vlc = "󰕼"
+blueman-manager = ""
+obsidian = ""
+mypaint = ""
+"brave-browser" = ""
+libreoffice-startcenter = ""
+mpv = ""
+firewall-config = "󰒄"
+"org.gnome.FileRoller|file-roller" = ""
+Kodi = "󰌔"
+"(?i)firefox" = ""
+"com.obsproject.Studio" = ""
+"com-sonicwall-NetExtender" = "󰢩"
+coolercontrol = ""
+"WinBox" = "󰑩"
+balena-etcher = ""
+DEFAULT = ""
+
+[class_active]
+
+[initial_class]
+
+[initial_class_active]
+
+[workspaces_name]
+10 = "ten"
+4 = "four"
+6 = "six"
+2 = "two"
+7 = "seven"
+1 = "one"
+3 = "three"
+0 = "zero"
+5 = "five"
+8 = "eight"
+9 = "nine"
+
+[title_in_class.zenity]
+"Downloading spotify" = ""
+
+[title_in_class."(?i)foot"]
+"emerge: (.+?/.+?)-.*" = "{match1}"
+
+[title_in_class."(firefox|chrom.*|brave-browser)"]
+"(?i)github" = ""
+"(?i)gitlab" = ""
+"(?i)youtube" = ""
+"(?i)twitch" = ""
+Bitwarden = "󰞀"
+
+[title_in_class.virt-manager]
+"(?i)Arch" = "󰣇"
+"(?i)Alma" = ""
+"(?i)Endeavour" = ""
+"(?i)Win" = ""
+"(?i)Ubuntu" = ""
+"(?i)Debian" = ""
+
+[title_in_class.kitty]
+"(?i)btop" = ""
+virt = ""
+"(?i)pacman|(?i)yay" = "󰮯"
+"vim|vi" = ""
+
+[title_in_class_active]
+
+[title_in_initial_class]
+
+[title_in_initial_class_active]
+
+[initial_title_in_class."(firefox|chrom.*|brave-browser)"]
+"Home Assistant" = "󰟐"
+
+[initial_title_in_class_active]
+
+[initial_title_in_initial_class]
+
+[initial_title_in_initial_class_active]
+
+[exclude]
+jetbrains-studio = "Updates.*|Installation.*|Confirm.*"
+"" = "^$"
+virt-manager = ".*QEMU/KVM - Connection Details"
+"Gimp-2.10" = "Open Image|GNU Image Manipulation Program|Create a New Image"
+"brave-browser" = "Save File"
+nextcloud = "Nextcloud"
+"[Ss]team" = "Friends.*|Settings.*|Special Offers"
+Soffice = "Confirm File Format"
+
+[format]
+dedup = false
+dedup_inactive_fullscreen = false
+delim = " "
+workspace = "<b>{id}</b>{delim}{clients}"
+workspace_empty = "<b>{id}</b>"
+client = "{icon}{delim}"
+client_fullscreen = "{icon}{delim}"
+client_active = "<span color='#e6ebfa'>{icon}</span>"
+client_dup = "{icon}{counter_sup}{delim}"
+client_dup_active = "*{icon}*{delim}{icon}{counter_unfocused_sup}"
+client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused_sup}"
