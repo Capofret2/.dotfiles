@@ -12,7 +12,7 @@
     "cpu",
     "memory",
     "hyprland/workspaces",
-    "mpris",
+    "mpris"
   ],
   "modules-center": [],
   "modules-right": [
@@ -21,8 +21,7 @@
     "pulseaudio",
     "backlight",
     "bluetooth",
-    "network",
-    "custom/updates"
+    "network"
   ],
   "custom/launcher": {
     "format": "󰣇",
@@ -108,11 +107,11 @@
       "mode-mon-col": 3,
       "on-scroll": 1,
       "format": {
-        "months": "<span color='#cdd6f4'><b>{}</b></span>",
-        "days": "<span color='#89b4fa'><b>{}</b></span>",
-        "weeks": "<span color='#b4befe'><b>W{}</b></span>",
-        "weekdays": "<span color='#b4befe'><b>{}</b></span>",
-        "today": "<span color='#f38ba8'><b>{}</b></span>"
+        "months": "<span color='#888888'><b>{}</b></span>",
+        "days": "<span color='#444444'><b>{}</b></span>",
+        "weeks": "<span color='#666666'><b>W{}</b></span>",
+        "weekdays": "<span color='#666666'><b>{}</b></span>",
+        "today": "<span color='#9400d3'><b>{}</b></span>"
       }
     },
     "actions": {
@@ -211,12 +210,12 @@
       ""
     ],
     "on-scroll-up": "brightnessctl s 1-",
-    "on-scroll-down": "brightnessctl s +1",
+    "on-scroll-down": "brightnessctl s +1"
   },
   "hyprland/language": {
     "format": "󰌌  {}",
     "format-keyboard-us": "EN",
-    "format-pinyin": "ZH",
+    "format-pinyin": "ZH"
   },
   "network": {
     "format": "{ifname}",
