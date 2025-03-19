@@ -69,9 +69,6 @@ tooltip {
     padding-left: 10px;
 }
 
-#bluetooth {
-}
-
 #backlight {
     padding-right: 10px;
     padding-left: 10px;
@@ -103,11 +100,6 @@ tooltip {
     padding-left: 10px;
 }
 
-#custom-updates {
-    /* padding-right: 10px; */
-    /* padding-left: 10px; */
-}
-
 /* ====================== 工作区 ====================== */
 #workspaces {
     padding-left: 4px;
@@ -125,9 +117,6 @@ tooltip {
 
 #workspaces button.active {
     border-color: rgba(0, 0, 0, 0.7);
-}
-
-#workspaces button:hover {
 }
 
 /* ====================== 电池警告动画 ====================== */

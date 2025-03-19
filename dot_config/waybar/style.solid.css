@@ -4,20 +4,26 @@
     font-size: 14px;
     font-weight: bold;
     min-height: 0;
-    text-shadow: 0 0 0 grey;
+    color: #000000;
+    border-radius: 0px;
+    /* text-shadow: 0 0 0 grey; */
 }
 
 /* ====================== 主窗口 ====================== */
 window#waybar {
     /* background: transparent; */
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 /* ====================== 工具提示 ====================== */
 tooltip {
-    background: rgba(255, 255, 255, 1);
-    border: 2px solid #c0caf5;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000000;
+    text-shadow: 0 0 0 transparent;
+    padding: 0 0 0 0; /* up right down left*/
+    
+    /* border: 2px solid #c0caf5; */
+    /* border-radius: 5px; */
 }
 
 /* ====================== 通用模块样式 ====================== */
@@ -37,23 +43,23 @@ tooltip {
 #language,
 #network,
 #custom-updates {
-    background: rgba(255, 255, 255, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
-    margin: 10px 4px 4px 4px;
-    padding: 4px 4px;
+    /* background: rgba(255, 255, 255, 0); */
+    /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); */
+    margin: 5px 0px 5px 0px; /* up right down left */
+    padding: 0px 0px;
     /* border: 2px solid rgba(240, 192, 169, 0.6); */
-    border-radius: 8px;
+    border-radius: 100px;
 }
 
 /* ====================== 特殊模块样式 ====================== */
 #custom-launcher {
-    margin-left: 10px;
+    margin-left: 6px;
     padding-right: 10px;
     padding-left: 10px;
 }
 
 #network {
-    margin-right: 10px;
+    margin-right: 6px;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -61,9 +67,6 @@ tooltip {
 #language {
     padding-right: 10px;
     padding-left: 10px;
-}
-
-#bluetooth {
 }
 
 #backlight {
@@ -97,11 +100,6 @@ tooltip {
     padding-left: 10px;
 }
 
-#custom-updates {
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
 /* ====================== 工作区 ====================== */
 #workspaces {
     padding-left: 4px;
@@ -118,12 +116,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    border-color: rgba(226, 146, 145, 0.7);
-}
-
-#workspaces button:hover {
-    background: #e29291;
-    color: #f0c0a9;
+    border-color: rgba(0, 0, 0, 0.7);
 }
 
 /* ====================== 电池警告动画 ====================== */
