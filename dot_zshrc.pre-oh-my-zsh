@@ -1,0 +1,85 @@
+# ==============================
+# 1. Zsh Basic Configuration
+# ==============================
+HISTFILE=~/.histfile          # Location of the history file
+HISTSIZE=102400               # Recommended to increase the number of commands stored in memory
+SAVEHIST=102400               # Recommended to increase the number of commands saved to disk
+setopt HIST_IGNORE_SPACE      # Recommended: Ignore commands starting with a space
+setopt INC_APPEND_HISTORY     # Recommended: Write history in real-time
+
+# ==============================
+# 2. Autocompletion Configuration
+# ==============================
+autoload -Uz compinit
+compinit -i                    # Initialize autocompletion in safe mode
+zstyle ':completion:*' menu select                          # Enable menu selection for completions
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"      # Use LS_COLORS for completion colors
+
+# ==============================
+# 3. Environment Variables
+# ==============================
+export EDITOR=nvim                          # Default editor
+export PATH="$PATH:$HOME/.local/bin"         # Recommended to use absolute paths
+export LS_COLORS="di=1;34:ow=1;33"           # Merged color settings
+
+# Input Method Configuration
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# ==============================
+# 4. Key Bindings
+# ==============================
+bindkey -e                                   # Emacs key bindings
+bindkey "\e[H" beginning-of-line            # Home key
+bindkey "\e[F" end-of-line                   # End key
+
+# ==============================
+# 5. Aliases
+# ==============================
+# File Operations
+alias ll='ls --color=auto -lh'
+alias lla='ls --color=auto -lha'
+alias duh='du -h -d 1'
+
+# Editor Related
+alias vi='nvim'
+alias vim='nvim'
+alias vi-zshrc='nvim ~/.zshrc'
+alias source-zshrc='source ~/.zshrc'
+
+# System Management
+alias mnt-pssd='sudo mount UUID=362426E02426A2BB /mnt/pssd/samsung-t7-shield'
+
+# Clipboard Operations
+alias ccb="xclip -selection clipboard"
+
+# ==============================
+# 6. Application Aliases
+# ==============================
+# GUI Application Aliases
+alias wechat='/opt/wechat/wechat'
+alias steam='~/.millennium/start.sh'
+
+# ==============================
+# 7. Prompt Configuration
+# ==============================
+PROMPT="%F{green}%n@%m%f %F{blue}%~%f %# "  # Minimalist prompt
+RPROMPT='[%D{%H:%M:%S}]'                    # Recommended: Add a right-side timestamp
+
+# ==============================
+# 8. Utility Functions
+# ==============================
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
+
+# ==============================
+# 9. Plugin Initialization
+# ==============================
+eval "$(zoxide init zsh)"  # Directory navigation plugin
