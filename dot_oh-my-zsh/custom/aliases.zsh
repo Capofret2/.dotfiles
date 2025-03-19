@@ -11,6 +11,8 @@ alias vi='nvim'
 alias vim='nvim'
 alias vi-zshrc='nvim ~/.zshrc'
 alias source-zshrc='source ~/.zshrc'
+alias dot-edit='chezmoi edit'
+alias dot-apply='chezmoi apply'
 
 # System Management
 alias mnt-pssd='sudo mount UUID=362426E02426A2BB /mnt/pssd/samsung-t7-shield'
