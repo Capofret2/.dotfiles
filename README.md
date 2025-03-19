@@ -6,6 +6,7 @@
 - Distribution: Arch Linux x86_64
 - Kernel: 6.13.7-zen1-1-zen
 - Shell: Zsh (with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh))
+- Key Remapper: [keyd](https://github.com/rvaiya/keyd)
 - Windows Manager: [Hyprland](https://github.com/hyprwm/Hyprland)
 - Terminal Emulator: [Foot](https://codeberg.org/dnkl/foot)
 - Editor: [Neovim](https://github.com/neovim/neovim) (with [vim-plug](https://github.com/junegunn/vim-plug))
