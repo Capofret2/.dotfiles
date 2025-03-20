@@ -21,6 +21,14 @@ alias mnt-pssd='sudo mount UUID=362426E02426A2BB /mnt/pssd/samsung-t7-shield'
 # alias ccb="xclip -selection clipboard"
 alias ccb="wl-copy"
 
+# Shuffle Wallpapers
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers/"
+CURRENT_WALL=$(hyprctl hyprpaper listloaded)
+# Get a random wallpaper that is not the current one
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+# Apply the selected wallpaper
+alias shuffle-wallpaper='hyprctl hyprpaper reload ,"$WALLPAPER"'
+
 # ==============================
 # Application Aliases
 # ==============================
