@@ -1,7 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 
--- lua/config/keymaps.lua
 local wk = require('which-key')
 
 wk.setup({
@@ -59,3 +58,24 @@ wk.setup({
   post_hook = nil,
 })
 
+-- 禁用 easymotion 的默认快捷键
+vim.g.EasyMotion_do_mapping = 0
+
+-- 启用智能大小写匹配
+vim.g.EasyMotion_smartcase = 1
+
+-- 设置 easymotion 的快捷键
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = false, silent = true }
+
+-- 搜索并跳转到任意字符
+map('n', '<Leader>s', '<Plug>(easymotion-s2)', opts)
+
+-- 向下跳转到行
+map('n', '<Leader>j', '<Plug>(easymotion-j)', opts)
+
+-- 向上跳转到行
+map('n', '<Leader>k', '<Plug>(easymotion-k)', opts)
+
+-- 搜索并跳转到单词
+map('n', '<Leader>w', '<Plug>(easymotion-w)', opts)
