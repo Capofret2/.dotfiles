@@ -9,9 +9,10 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'numToStr/Comment.nvim'
 Plug 'ycm-core/YouCompleteMe'
+" Plug 'p00f/clangd_extensions.nvim'
 call plug#end()
 
-colorscheme catppuccin-latte
+colorscheme catppuccin-mocha
 set number
 " 设置剪贴板工具为 wl-clipboard
 let g:clipboard = {
@@ -35,6 +36,37 @@ highlight Normal guibg=NONE ctermbg=NONE
 highlight NonText guibg=NONE ctermbg=NONE
 
 lua require('Comment').setup()
+
+" lua require("clangd_extensions").setup({
+"  \   ast = {
+"  \       role_icons = {
+"  \           type = "",
+"  \           declaration = "",
+"  \           expression = "",
+"  \           specifier = "",
+"  \           statement = "",
+"  \           ["template argument"] = "",
+"  \       },
+"  \       kind_icons = {
+"  \           Compound = "",
+"  \           Recovery = "",
+"  \           TranslationUnit = "",
+"  \           PackExpansion = "",
+"  \           TemplateTypeParm = "",
+"  \           TemplateTemplateParm = "",
+"  \           TemplateParamObject = "",
+"  \       },
+"  \       highlights = {
+"  \           detail = "Comment",
+"  \       },
+"  \   },
+"  \   memory_usage = {
+"  \       border = "none",
+"  \   },
+"  \   symbol_info = {
+"  \       border = "none",
+"  \   },
+"  \ })
 
 " YouCompleteMe setup
 let g:ycm_enable_semantic_highlighting=1

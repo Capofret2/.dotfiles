@@ -21,18 +21,13 @@ alias mnt-pssd='sudo mount UUID=362426E02426A2BB /mnt/pssd/samsung-t7-shield'
 # alias ccb="xclip -selection clipboard"
 alias ccb="wl-copy"
 
-# Shuffle Wallpapers
-WALLPAPER_DIR="$HOME/Pictures/Wallpapers/"
-CURRENT_WALL=$(hyprctl hyprpaper listloaded)
-# Get a random wallpaper that is not the current one
-WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
-# Apply the selected wallpaper
-alias shuffle-wallpaper='hyprctl hyprpaper reload ,"$WALLPAPER"'
-
 # ==============================
 # Application Aliases
 # ==============================
 # GUI Application Aliases
 alias wechat='/opt/wechat/wechat'
 alias steam='~/.millennium/start.sh'
+alias change-wallpaper='~/Repos/Hyprpaper-gui/change-wallpaper & disown'
 
+# Container
+alias docker-run-easyconnect='vncviewer & disown; docker run --rm --device /dev/net/tun --cap-add NET_ADMIN -ti -e PASSWORD=1234 -e URLWIN=1 -v $HOME/.ecdata:/root -p 127.0.0.1:5901:5901 -p 127.0.0.1:1080:1080 -p 127.0.0.1:8888:8888 hagb/docker-easyconnect:7.6.7'
