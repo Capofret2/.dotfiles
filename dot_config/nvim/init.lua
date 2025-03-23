@@ -4,6 +4,7 @@ vim.opt.clipboard = 'unnamedplus'
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'easymotion/vim-easymotion'
+  use 'sphamba/smear-cursor.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use 'echasnovski/mini.icons'
   use 'folke/which-key.nvim'
