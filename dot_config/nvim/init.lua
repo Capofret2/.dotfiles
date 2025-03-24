@@ -9,12 +9,12 @@ require('packer').startup(function(use)
   use 'echasnovski/mini.icons'
   use 'folke/which-key.nvim'
   use 'tpope/vim-sensible'
-  use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'goolord/alpha-nvim'
   use { 'preservim/nerdtree', cmd = 'NERDTreeToggle' }
   use 'godlygeek/tabular'
   use 'preservim/vim-markdown'
   use 'numToStr/Comment.nvim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
 end)
 
 require('config.colors')
