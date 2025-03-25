@@ -26,10 +26,6 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 
-  git = {
-    enable = true,
-  },
-
   renderer = {
     highlight_git = true,
     root_folder_modifier = ":t",
@@ -63,3 +59,5 @@ require("nvim-tree").setup({
     },
   },
 })
+
+

@@ -11,7 +11,7 @@ local opts = { noremap = false, silent = true }
 map('i', 'fjf', '<ESC>', opts)
 
 -- delete single character without copying into register
-map('n', 'x', '_x', opts)
+-- map('n', 'x', '_x', opts)
 
 -- multi-window management
 map('n', '<C-Left>', '<C-w>h', opts) -- 切换到左侧窗口
@@ -46,5 +46,6 @@ map('n', '<Leader>k', '<Plug>(easymotion-k)', opts) -- go to a line above
 map('n', '<Leader>w', '<Plug>(easymotion-w)', opts) -- go to a word following
 
 -- nvim-tree
-map("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- toggle file explorer
+map("n", "eo", ":NvimTreeToggle<CR>", opts) -- toggle file explorer
+map("n", "ef", ":NvimTreeFocus<CR>", opts) -- focus file explorer
 
