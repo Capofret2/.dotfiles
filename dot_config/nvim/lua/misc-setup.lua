@@ -8,6 +8,11 @@ require('alpha').setup(
 vim.g.EasyMotion_do_mapping = 0
 vim.g.EasyMotion_smartcase = 1
 
+-- nvim-autopairs
+require('nvim-autopairs').setup({
+  disable_filetype = { "TelescopePrompt", "spectre_panel", "snacks_picker_input" },
+})
+
 -- nvim-tree
 require("nvim-tree").setup({
   sort = {

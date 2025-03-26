@@ -1,12 +1,17 @@
 /* ====================== 全局设置 ====================== */
 * {
-    font-family: "JetBrainsMono Nerd Font Propo";
+    /*font-family: "JetBrainsMono Nerd Font Propo";*/
+    /*font-size: 14px;*/
+    /*font-weight: bold;*/
+    /*min-height: 0;*/
+    /*color: #000000;*/
+    /*border-radius: 0px;*/
+    /* text-shadow: 0 0 0 grey; */
+    font-family: "GohuFont 11 Nerd Font Propo", "Fusion Pixel 12px Monospaced zh_hans";
     font-size: 14px;
     font-weight: bold;
     min-height: 0;
-    color: #000000;
     border-radius: 0px;
-    /* text-shadow: 0 0 0 grey; */
 }
 
 /* ====================== 主窗口 ====================== */
@@ -18,12 +23,15 @@ window#waybar {
 /* ====================== 工具提示 ====================== */
 tooltip {
     background: rgba(255, 255, 255, 0.9);
-    color: #000000;
     text-shadow: 0 0 0 transparent;
     padding: 0 0 0 0; /* up right down left*/
     
     /* border: 2px solid #c0caf5; */
     /* border-radius: 5px; */
+}
+
+tooltip * {
+    color: #000000;
 }
 
 /* ====================== 通用模块样式 ====================== */
@@ -45,7 +53,8 @@ tooltip {
 #custom-updates {
     /* background: rgba(255, 255, 255, 0); */
     /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); */
-    margin: 5px 0px 5px 0px; /* up right down left */
+    /* up right down left */
+    margin: 5px 0px 5px 0px; 
     padding: 0px 0px;
     /* border: 2px solid rgba(240, 192, 169, 0.6); */
     border-radius: 100px;
@@ -61,17 +70,12 @@ tooltip {
 #network {
     margin-right: 6px;
     padding-right: 10px;
-    padding-left: 10px;
-}
-
-#language {
-    padding-right: 10px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
 }
 
 #backlight {
-    padding-right: 10px;
-    padding-left: 10px;
+    /*padding-right: 10px;*/
+    /*padding-left: 10px;*/
 }
 
 #pulseaudio {
@@ -81,7 +85,7 @@ tooltip {
 
 #memory {
     padding-right: 10px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
 }
 
 #cpu {
@@ -127,7 +131,7 @@ tooltip {
 }
 
 #battery {
-    padding-right: 10px;
+    /*padding-right: 10px;*/
     padding-left: 10px;
 }
 
