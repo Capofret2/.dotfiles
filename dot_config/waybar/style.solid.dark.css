@@ -57,25 +57,25 @@ tooltip * {
 #network {
     margin-right: 6px;
     padding-right: 10px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     color: #ffffff;
 }
 
 #backlight {
-    padding-right: 10px;
-    padding-left: 10px;
+    /*padding-right: 10px;*/
+    /*padding-left: 10px;*/
     color: #ffffff;
 }
 
 #pulseaudio {
     padding-right: 10px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     color: #ffffff;
 }
 
 #memory {
     padding-right: 10px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     color: #ffffff;
 }
 

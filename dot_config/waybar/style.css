@@ -1,44 +1,35 @@
 /* ====================== 全局设置 ====================== */
 * {
-    /*font-family: "JetBrainsMono Nerd Font Propo";*/
-    /*font-size: 14px;*/
-    /*font-weight: bold;*/
-    /*min-height: 0;*/
-    /*color: #000000;*/
-    /*border-radius: 0px;*/
-    /* text-shadow: 0 0 0 grey; */
-    font-family: "GohuFont 11 Nerd Font Propo", "Fusion Pixel 12px Monospaced zh_hans";
-    font-size: 14px;
+    font-family: "GohuFont 11 Nerd Font Propo";
+    font-size: 12px;
     font-weight: bold;
     min-height: 0;
     border-radius: 0px;
 }
 
+/* *:not(#workspaces) { */
+/* } */
+
 /* ====================== 主窗口 ====================== */
 window#waybar {
-    /* background: transparent; */
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* ====================== 工具提示 ====================== */
 tooltip {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     text-shadow: 0 0 0 transparent;
     padding: 0 0 0 0; /* up right down left*/
-    
-    /* border: 2px solid #c0caf5; */
-    /* border-radius: 5px; */
 }
 
 tooltip * {
-    color: #000000;
+    color: #ffffff;
 }
 
 /* ====================== 通用模块样式 ====================== */
 #custom-launcher,
 #workspaces button,
 #mpris,
-#privacy-item,
 #bluetooth,
 #clock,
 #tray,
@@ -47,17 +38,12 @@ tooltip * {
 #backlight,
 #battery,
 #pulseaudio,
-#gamemode,
-#language,
 #network,
 #custom-updates {
-    /* background: rgba(255, 255, 255, 0); */
-    /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); */
-    /* up right down left */
-    margin: 9px 0px 9px 0px; 
+    margin: 5px 0px 5px 0px; /* up right down left */
     padding: 0px 0px;
-    /* border: 2px solid rgba(240, 192, 169, 0.6); */
     border-radius: 100px;
+    color: #ffffff;
 }
 
 /* ====================== 特殊模块样式 ====================== */
@@ -65,62 +51,71 @@ tooltip * {
     margin-left: 6px;
     padding-right: 10px;
     padding-left: 10px;
+    color: #ffffff;
 }
 
 #network {
     margin-right: 6px;
     padding-right: 10px;
     /*padding-left: 10px;*/
+    color: #ffffff;
 }
 
 #backlight {
     /*padding-right: 10px;*/
     /*padding-left: 10px;*/
+    color: #ffffff;
 }
 
 #pulseaudio {
     padding-right: 10px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
+    color: #ffffff;
 }
 
 #memory {
     padding-right: 10px;
     /*padding-left: 10px;*/
+    color: #ffffff;
 }
 
 #cpu {
     padding-right: 10px;
     padding-left: 10px;
+    color: #ffffff;
 }
 
 #clock {
     padding-right: 10px;
     padding-left: 10px;
+    color: #ffffff;
 }
 
-#privacy-item {
-    background: #e64553;
-    padding-right: 10px;
+#mpris {
     padding-left: 10px;
+    color: #ffffff;
 }
 
 /* ====================== 工作区 ====================== */
 #workspaces {
-    /*padding-left: 4px;*/
+    padding-left: 4px;
+    color: #ffffff;
 }
 
 #workspaces button {
     margin-left: 3px;
-    padding: 0 3px;
-    /*transition: all 0.1s ease;*/
+    padding: 0 7px;
+    transition: all 0.1s ease;
+    color: #ffffff;
 }
 
 #workspaces button.empty {
     padding: 0 10px;
+    color: #ffffff;
 }
 
 #workspaces button.active {
-    border-color: rgba(0, 0, 0, 0.7);
+    color: yellowgreen;
 }
 
 /* ====================== 电池警告动画 ====================== */
@@ -131,7 +126,7 @@ tooltip * {
 }
 
 #battery {
-    /*padding-right: 10px;*/
+    padding-right: 10px;
     padding-left: 10px;
 }
 
@@ -141,7 +136,7 @@ tooltip * {
 
 #battery.critical:not(.charging) {
     color: #f9e2af;
-    animation: blink 2s linear infinite alternate;
+    animation: blink 4s linear infinite alternate;
 }
 
 /* ====================== 系统托盘 ====================== */
