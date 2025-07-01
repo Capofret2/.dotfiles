@@ -1,7 +1,10 @@
-
 local map = vim.api.nvim_set_keymap  
 local opts = { noremap = true, silent = true, buffer = bufnr }
   
+---------------------
+--   LSP Keymaps   --
+---------------------
+
 map("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
 map("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 map("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window

@@ -15,6 +15,22 @@ function ssh
   /usr/bin/ssh $argv
 end
 
+function mnt-pssd
+  sudo mount UUID=362426E02426A2BB /mnt/pssd/samsung-t7-shield
+end
+
+function conda-init
+  eval "$(/opt/miniconda3/bin/conda shell.fish hook)"
+end
+
+function clip 
+  echo $argv | wl-copy
+end
+
+function clipf
+  cat $argv | wl-copy
+end
+
 function y
   set -l tmp (mktemp -t "yazi-cwd.XXXXXX")
   yazi $argv --cwd-file="$tmp"
@@ -51,7 +67,7 @@ function docker-run-easyconnect
     -v $HOME/.ecdata:/root \
     -p 127.0.0.1:5901:5901 \
     -p 127.0.0.1:1080:1080 \
-    -p 127.0.0.1:8888:8888 \
+    -p 127.0.0.1:8889:8889 \
     hagb/docker-easyconnect:7.6.7 $argv
 end
 
