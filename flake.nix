@@ -24,9 +24,14 @@
             home.homeDirectory = "/home/tiramisu";
             home.stateVersion = "25.05";
 
-            programs.lazygit.enable = true;
-            programs.eza.enable = true;
-            programs.bat.enable = true;
+            home.sessionVariables = {
+              EDITOR = "nvim";
+            };
+
+            home.packages = with pkgs; [
+              eza
+              gotop
+            ];
 
             programs.fish.enable = true;
             home.file.".config/fish".source = ./files/fish;
@@ -40,9 +45,24 @@
             home.file.".config/yazi".source = ./files/yazi;
             home.file.".config/yazi".recursive = true;
 
-            home.sessionVariables = {
-              EDITOR = "nvim";
+            programs.bat = {
+              enable = true;
+              config = {
+                # theme = "catppuccin-latte";
+                pager = "less -FR";
+              };
             };
+
+            programs.lazygit = {
+              enable = true;
+              settings = {
+                gui.theme = {
+                  lightTheme = "catppuccin-latte";
+                  darkTheme = "catppuccin-mocha";
+                };
+              };
+            };
+
           }
         ];
       };

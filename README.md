@@ -3,8 +3,8 @@
 ## Env
 
 2025.07.12
-- Distribution: NixOS 25.05
-- Kernel: 
+- Distro: NixOS 25.05
+- Kernel: 6.15.5 
 - Shell: Fish
 - Editor: Neovim with Lazy
 - Explorer: Yazi
