@@ -10,6 +10,6 @@ function tree
   eza --tree --git-ignore $argv
 end
 
-function cat
-  bat $argv
-end
+# function cat
+#   bat $argv
+# end
